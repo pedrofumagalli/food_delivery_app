@@ -6,13 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600,700,500,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./index.css">
   <title>Document</title>
 </head>
 
 <body>
-  <section class="section-one">
+  <!-- <section id="header">
     <header>
       <div class="container header">
         <img src="./images/BellaOlonje.png" alt="">
@@ -32,36 +35,39 @@
         </ul>
       </div>
     </header>
-  </section>
+  </section> -->
 
   <!---->
-  <section class="section-banner">
+  <section id="banner">
     <div class="container">
-      <div class="text">
-        <span class="begin">Food app</span>
-        <h1>Why stay hungry when <span class="break">you can order form Bella Onojie</span></h1>
-        <span class="end">Download the bella onoje’s food app now on</span>
+      <div class="container-text">
+        <span>Food app</span>
+        <h1>Why stay hungry when you can order form Bella Onojie</h1>
+        <p>Download the bella onoje’s food app now on</p>
       </div>
-      <div class="button">
-        <button><span class="begin">Playstore</span></button>
-        <button><span class="begin">Appstore</span></button>
-      </div>
-      <div class="img-iphone">
-        <img src="./images/./Group 53.png" alt="">
+      <div class="container-button">
+        <button><span>Playstore</span></button>
+        <button><span>App store</span></button>
       </div>
     </div>
   </section>
 
-  <section class="section-account">
-    <div class="container account">
-      <hr>-</hr>
-      <h2>How the app works</h2>
+  <section id="account">
+    <div class="container">
+      <div class="container-image-iphone">
+        <img src="./images/./Group 53.png" alt="">
+      </div>
+      <div class="divise top"></div>
+      <div class="title">
+        <h2>How the app works</h2>
+      </div>
+      <div class="divise bottom"></div>
       <div class="content">
-        <div class="img-account">
+        <div class="image-account">
           <img src="./images/Account.png" alt="">
         </div>
         <div class="text-account">
-          <span class="create">Create an account</span>
+          <span>Create an account</span>
           <h2>Create/login to an existing account to get started</h2>
           <p>An account is created with your email and a desired password</p>
         </div>
@@ -69,34 +75,56 @@
     </div>
   </section>
 
-  <section class="section-explore">
-    <div class="container explore">
-      <div class="text">
-        <span>Explore varieties</span>
-        <h2>Shop for your favorites meal as e dey hot.</h2>
-        <p>Shop for your favorite meals or drinks and enjoy while doing it.</p>
-      </div>
-      <div class="image-explore">
-        <img src="./images/Explore.png" alt="">
+  <section id="explore">
+    <div class="container">
+      <div class="content">
+        <div class="image-explore">
+          <img src="./images/Explore.png" alt="">
+        </div>
+        <div class="text-explore">
+          <span>Explore varieties</span>
+          <h2>Shop for your favorites meal as e dey hot.</h2>
+          <p>Shop for your favorite meals or drinks and enjoy while doing it.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section-download">
+  <section id="checkout">
     <div class="container">
-      <div class="text">
-        <h2>Download the app now.</h2>
-        <p>Available on your favorite store. Start your premium experience now</p>
+      <div class="content">
+        <div class="image-checkout">
+          <img src="./images/checkout.png" alt="">
+        </div>
+        <div class="text-checkout">
+          <span>Checkout</span>
+          <h2>When you done check out and get it delivered.</h2>
+          <p>When you done check out and get it delivered with ease.</p>
+        </div>
       </div>
-      <div class="button">
-        <button><span>Playstore</span></button>
-        <button><span>App store</span></button>
+
+    </div>
+
+  </section>
+
+  <section id="download">
+    <div class="container">
+      <div class="content">
+        <div class="text-download">
+          <h2>Download the app now.</h2>
+          <p>Available on your favorite store. Start your premium experience now</p>
+        </div>
+        <div class="button">
+          <button><span>Playstore</span></button>
+          <button><span>App store</span></button>
+        </div>
       </div>
     </div>
   </section>
-  <section class="section-footer">
+
+  <section id="footer">
     <div class="container">
-      <div class="img-footer">
+      <div class="image-footer">
         <img src="./images/BellaOlonje.png" alt="">
       </div>
       <div class="net-footer">
@@ -105,11 +133,10 @@
         <img src="./images/./instagram.png" alt="">
       </div>
       <div class="copywright-footer">
-        <span>Copywright 2020 Bella Onojie.com</span>
+        <span>Copywright 2020 Bella</span>
       </div>
     </div>
   </section>
-
 </body>
 
 </html>

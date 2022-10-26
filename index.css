@@ -5,236 +5,401 @@ body {
   box-sizing: border-box;
 }
 
-ul {
-  padding: 0;
-  list-style: none;
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
-
-.break {
-  display: block;
-}
-
 .container {
   width: 1024px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-.container.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media  screen and (max-width:767px) {
+  .container {
+    width: auto;
+  } 
 }
 
-header .container ul {
-  display: flex;
-}
-
-header .container li + li {
-  margin-left: 114px;
-}
-
-header .container li a {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 28px;
-  text-decoration: none;
-}
-
-header .container li a:hover {
-  color: #FA4A0C;
-}
-
-.section-banner {
+/*Section Banner CSS*/
+#banner {
   background-image: url('./images/banner.png');
   min-height: 620px;
   max-height: 620px;
-
-}
-
-.section-banner .container {
-  text-align: center;
-}
-
-.section-banner .text {
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 73px;
 }
 
-.section-banner .text span.begin {
-  display: block;
-  font-weight: 700;
-  font-size: 24px;
-  height: 36px;
-  color: #F6F6F6;  
-  padding-bottom: 17px;
+@media  screen and (max-width:767px) {
+  #banner {
+    background-image: none;
+  } 
 }
 
-.section-banner .text h1 {
+#banner .container-text {
+  text-align: center;
+}
+
+#banner .container-text span {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #F7F7F7;
+}
+
+@media screen and (max-width:767px) {
+  #banner .container-text span {
+    font-size: 16px;
+    line-height: 24px;    
+    color: #737373;
+  } 
+}
+
+#banner .container-text h1 {
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 58px;
-  height: 80px;
-  color: #ffffff;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
 }
 
-.section-banner .text span.end {
-  display: block;
+@media  screen and (max-width:767px) {
+  #banner .container-text h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #252B42;
+  } 
+}
+
+#banner .container-text p {
   font-weight: 500;
   font-size: 24px;
-  height: 38px;
-  color: #F6F6F6; 
-  padding-top: 27px;
-  padding-bottom: 54px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.2px;                                              
+  color: #F7F7F7;
 }
 
-.section-banner .container .button {
-  position: relative;
-  z-index: 1;
+@media  screen and (max-width:767px) {
+  #banner .container-text p {   
+  color: #737373;
+  } 
 }
 
-.section-banner .container button {
-  color: #FFFFFF;
-  padding: 16px 58px;
-  box-shadow: 0px 10px 30px rgba(183, 50, 39, 0.2);
-  border-radius: 30px;
-  background-color: transparent;
+#banner .container-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width:767px) {
+  #banner .container-button {
+     flex-direction: column;
+  }
+}
+
+#banner .container-button button {
+  width: 236px;
+  height: 68px;
   border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  padding: 16px 0;
+  color: #FFFFFF;
 }
 
-.section-banner .container button:hover {
-  background-color: #FA4A0C;
+@media screen and (max-width:767px) {
+  #banner .container-button button {
+    background: #FFFFFF;
+    color: #FA4A0C;
+    border: 1px solid #FA4A0C;
+  }
+}
+
+#banner .container-button button:hover {
+  background: #FA4A0C;
+  box-shadow: 0px 10px 30px rgba(183, 50, 39, 0.2);
   border: 1px solid #FA4A0C;
 }
 
-.section-banner .container button + button {
-  margin-left: 16px;
+@media screen and (max-width:767px) {
+  #banner .container-button button:hover {
+    color: #FFFFFF;
+  } 
 }
 
-.section-banner .container span.begin {
-  font-weight: 700;
-  font-size: 24px;
-  height: 36px;
-  color: #F6F6F6;  
+#banner .container-button button + button {
+  margin-left: 32px;
 }
 
-.section-banner .img-iphone img {
-  margin-top: -100px;
-  margin-left: -200px;
-  width: 50%;
+@media screen and (max-width:767px) {
+  #banner .container-button button + button {
+    margin-top: 16px;
+    margin-left: 0;
+  }
 }
 
-.section-account .container.account {
-  margin-top: 500px;
-}
-
-.section-account .container.account hr {
-  width: 884px;
-  margin-bottom: 72px;
-  border: 3px solid #E4E4E4;
-}
-
-.section-account .container.account h2 {
-  font-weight: 600;
-  font-size: 44px;
-  color: #000000;
-  text-align: center;
-  
-}
-
-.section-account .container.account .content {
+/* Section Account CSS */
+#account .container .container-image-iphone {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.section-account .container.account .content .img-account {
-  display: flex;
-  margin-right: 150px;
+#account .container .container-image-iphone img {
+  width: auto;
+  margin-top: -200px;
 }
 
-.section-account .container.account .content .img-account img {
+@media screen and (max-width:767px) {
+  #account .container .container-image-iphone img {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+#account .container .divise {
   width: 100%;
-}
-.section-account .container.account .content .text-account {
-  width: 82%;
-}
-
-.section-account .container.account .content .text-account span.create {
-  font-weight: 700;
-  font-size: 24;
-  height: 36;
-  color: #FA4A0C
+  height: 2px;
+  background-color: #e4e4e4;
 }
 
-.section-account .container.account .content .text-account h2 {
-  font-weight: 700;
-  font-size: 40px;
-  color: #252B42;
-  margin-top: 17px;
-  text-align: left;
+#account .container .divise.bottom {
+  display: none;
 }
 
-.section-account .container.account .content .text-account p {
-  font-weight: 500;
-  font-size: 28px;
-  color: #737373;
-  margin-top: 27px;
+@media screen and (max-width:767px) {
+  #account .container .divise.top {
+    display: none;
+  }
+  #account .container .divise.bottom {
+    display: block;
+  } 
 }
 
-.section-explore .container.explore {
+#account .container .title {
+  text-align: center;
+}
+
+#account .container .title h2 {
+  font-family: 'Poppins', sans-serif;
+  font-Weight: 600;
+  font-size: 44px;
+  line-height: 36px;
+  letter-spacing: 0.1 px;
+  color: #000000;
+}
+
+@media screen and (max-width:767px) {
+  #account .container .title h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+}
+
+#account .container .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.section-explore .container.explore span {
-  font-weight: 700;
-  font-size: 24px;
-  color:#FA4A0C
+@media  screen and (max-width:767px) {
+  #account .container .content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
 }
 
-.section-explore .container.explore h2 {
-  font-weight: 700;
+#account .container .content img {
+  width: auto;
+}
+
+@media screen and (max-width:767px) {
+  #account .container .content img {
+    width: 100%;
+    /*padding-left: 30px;*/
+  }
+}
+
+#account .container .text-account span {
+  font-Weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #FA4A0C;
+}
+
+#account .container .text-account h2 {
+  font-Weight: 700;
   font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
   color:#252B42;
 }
 
-.section-explore .container.explore p {
-  font-weight: 500;
+#account .container .text-account p {
+  font-Weight: 500;
   font-size: 24px;
-  color:#737373;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #737373;
 }
 
-.section-explore .container.explore img {
-  width: 100%;
+@media screen and (max-width:767px) {
+  #account .container .text-account p {
+    font-Weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2px;
+    color: #737373;
+  }
 }
 
-.section-download {
+/*Section Explore CSS*/
+#explore .container .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width:767px) {
+  #explore .container .content {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  text-align: center;
+  }
+}
+
+#explore .container .content img {
+  width: auto;
+}
+
+@media screen and (max-width:767px) {
+  #explore .container .content img {
+    width: 100%;
+    /*padding-left: 30px;*/
+  }
+}
+
+#explore .content .text-explore span {
+  font-Weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #FA4A0C;
+}
+
+#explore .content .text-explore h2 {
+  font-Weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color:#252B42;
+}
+
+#explore .content .text-explore p {
+  font-Weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #737373
+}
+
+/*Section Checkout CSS*/
+#checkout .container .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width:767px) {
+  #checkout .container .content {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    text-align: center;
+  }
+}
+
+#checkout .container .content img {
+  width: auto;
+}
+
+@media screen and (max-width:767px) {
+  #checkout .container .content img {
+    width: 100%;
+    /*padding-left: 30px;*/
+  } 
+}
+
+#checkout .content .text-checkout span {
+  font-Weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #FA4A0C;
+}
+
+#checkout .content .text-checkout h2 {
+  font-Weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color:#252B42;
+}
+
+#checkout .content .text-checkout p {
+  font-Weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #737373
+}
+
+/*Section Download CSS*/
+#download {
   background-image: url('./images/banner_download.png');
   min-height: 510px;
   max-height: 510px;
+  padding: 145px 0;
 }
 
-.section-download .container {
+@media screen and (max-width:767px) {
+  #download {
+    background-image: none;
+    background-color: #252B42;
+  }
+}
+
+#download .container {
   text-align: center;
 }
 
-.section-download .container .text {
-  padding-top: 145px;
-}
-
-.section-download .container .text h2 {
-  font-weight: 700;
+#download .content .text-download h2 {
+  font-Weight: 700;
   font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
   color: #FFFFFF;
 }
 
-.section-download .container .text p {
-  font-weight: 500;
+#download .content .text-download p {
+  font-Weight: 500;
   font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
   color: #FFFFFF;
 }
 
-.section-download .container button {
+#download .container button {
   margin-top: 60px;
   background-color: transparent;
   box-shadow: 0px 10px 30px rgba(183, 50, 39, 0.2);
@@ -245,46 +410,78 @@ header .container li a:hover {
   gap: 10px;
 }
  
-.section-download .container button:hover {
+#download .container button:hover {
   background-color: #FA4A0C;
   border: 1px solid #FA4A0C;
   cursor: pointer;
 }
 
-.section-download .container span {
-  font-weight: 700;
-  font-size: 16px;
-  color: #FFFFFF;
-}
-
-.section-download .container button + button {
+#download .container button + button {
   margin-left: 16px;
 }
 
-.section-footer .container {
+@media screen and (max-width:767px){  
+  
+}
+
+/*Section Footer CSS*/
+
+#footer .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 37px 115px 53px 115px;
 }
 
-.section-footer .container .net-footer {
+@media screen and (max-width:767px) {
+  #footer .container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:767px) {
+  #footer .container .image-footer {
+    display: none;
+  }
+}
+
+
+#footer .container .net-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.section-footer .container .net-footer img + img {
+
+#footer .container .net-footer img {
+  cursor: pointer;
+}
+
+#footer .container .net-footer img + img {
   margin-left: 41px;
 }
 
-.section-footer .container .copywright span {
+#footer .container .copywright-footer span {
   font-weight: 700;
   font-size: 12px;
   color:#737373;
 }
 
-.section-footer .container .copywright-footer span:hover {
+@media screen and (max-width:767px) {
+  #footer .container .copywright-footer {
+    margin-top: 12px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  #footer .container .copywright-footer span {
+    color: #5c5c5c;
+    margin-top: 12px;
+  }
+}
+
+
+#footer .container .copywright-footer span:hover {
   color:#FA4A0C;
   cursor: pointer;
 }
